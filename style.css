@@ -702,72 +702,80 @@ p {
 }
 /* End  Media Query For Desktop */
 
-
-/* Education & Working History Section */
-#education {
-  padding: 50px 0;
-  background: #f9f9f9;
+/* General styling for the timeline */
+.education {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#education .section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 36px;
-  color: #333;
-}
-
-#education .timeline {
+.timeline {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-
-#education .timeline-item {
-  display: flex;
-  align-items: center;
   gap: 20px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#education .timeline-icon {
-  flex-shrink: 0;
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.timeline-icon img {
   width: 80px;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-#education .timeline-icon img {
-  width: 100%;
-  height: auto;
+.timeline-content {
+  max-width: 80%;
 }
 
-#education .timeline-content {
-  flex-grow: 1;
-}
-
-#education .timeline-content h2 {
-  font-size: 24px;
-  color: #333;
+.timeline-content h2 {
   margin-bottom: 10px;
 }
 
-#education .timeline-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.timeline-content ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-#education .timeline-content ul li {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 8px;
+/* Responsive styling */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+
+  .timeline-content ul li {
+    font-size: 0.9rem;
+  }
 }
 
-#education .timeline-content ul li strong {
-  color: #333;
+@media (max-width: 480px) {
+  .education .section-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content ul li {
+    font-size: 0.85rem;
+  }
 }
